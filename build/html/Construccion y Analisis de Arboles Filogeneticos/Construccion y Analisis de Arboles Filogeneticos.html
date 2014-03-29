@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Construcción y Análisis de Árboles Filogenéticos: &mdash; Tarea 1 2014</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/Captura8.ico"/>
+    <link rel="top" title="Tarea 1 2014" href="../index.html" />
+    <link rel="next" title="Conclusiones:" href="../Conclusiones/Conclusiones.html" />
+    <link rel="prev" title="Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  
+  <a href="https://www.cs.us.es/~fran/teaching/tob2014/tob2014.html"
+     class="visible-desktop hidden-xs"><img
+    id="banner"
+    style="position: absolute; top: 50px; right: 0; border: 0"
+    src="https://dl.dropboxusercontent.com/u/72256221/Omicas2.PNG"
+    alt="Técnicas Ómicas y Bioinformática"></a>
+    
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/Captura10.PNG">
+          Filogenia 2014</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="../Material extra.html">Material Extra</a></li>
+                <li><a href="http://www.ncbi.nlm.nih.gov/nuccore">Base datos NCBI</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Sitio <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduccion/Introduccion.html">Introducción:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduccion/Introduccion.html#antecedentes">-Antecedentes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduccion/Introduccion.html#objetivo-del-estudio">-Objetivo del estudio:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html">Secuencias biológicas usadas:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#argumentar-la-adecuacion-de-las-secuencias-seleccionadas">-Argumentar la adecuación de las secuencias seleccionadas:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#descripcion-de-las-secuencias-utilizadas-junto-con-sus-numeros-de-accesion">-Descripción de las secuencias utilizadas junto con sus números de accesión:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#enlace-al-archivo-de-las-secuencias">-Enlace al archivo de las secuencias:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html">Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html#algoritmo-de-alineamiento-multiple-seleccionado">-Algoritmo de alineamiento múltiple seleccionado:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html#comentar-alineamiento-multiple-obtenido-comentando-la-existencia-o-no-de-regiones-conservadas-y-su-relevancia">-Comentar alineamiento múltiple obtenido comentando la existencia o no de regiones conservadas y su relevancia:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html#comentar-alineamiento-multiple-obtenido-comentando-las-sustituciones-o-mutaciones-relevantes-entre-las-secuencias">-Comentar alineamiento múltiple obtenido comentando las sustituciones o mutaciones relevantes entre las secuencias:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html#mostrar-la-clasificacion-de-modelos-de-sustitucion-y-elegir-el-mejor-modelo-de-sustitucion-posible-para-la-construccion-de-arboles-filogeneticos">-Mostrar la clasificación de modelos de sustitución y elegir el mejor modelo de sustitución posible para la construcción de árboles filogenéticos:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html#describir-y-comentar-el-modelo-de-sustitucion-seleccionado">-Describir y comentar el modelo de sustitución seleccionado:</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Construcción y Análisis de Árboles Filogenéticos:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#comentar-la-seleccion-de-los-metodos-de-construccion-de-arboles-utilizados">-Comentar la selección de los métodos de construcción de árboles utilizados:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#describir-los-arboles-filogeneticos-obtenidos-comentando-los-distintos-clados-y-los-resultados-que-se-deducen-de-ellos">-Describir los árboles filogenéticos obtenidos comentando los distintos clados y los resultados que se deducen de ellos:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Conclusiones/Conclusiones.html">Conclusiones:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Conclusiones/Conclusiones.html#relacionar-todos-los-resultados-anteriores-para-formular-conclusiones-del-analisis-realizado">-Relacionar todos los resultados anteriores para formular conclusiones del análisis realizado:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Conclusiones/Conclusiones.html#relacionar-los-resultados-obtenidos-con-los-descritos-en-el-articulo-seleccionado">-Relacionar los resultados obtenidos con los descritos en el artículo seleccionado:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Referencias/Referencias.html">Referencias:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Referencias/Referencias.html#enumerar-articulos-manuales-de-las-herramientas-usadas-y-herramientas-de-software">-Enumerar artículos, manuales de las herramientas usadas y herramientas de software:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Construcción y Análisis de Árboles Filogenéticos:</a><ul>
+<li><a class="reference internal" href="#comentar-la-seleccion-de-los-metodos-de-construccion-de-arboles-utilizados">-Comentar la selección de los métodos de construcción de árboles utilizados:</a></li>
+<li><a class="reference internal" href="#describir-los-arboles-filogeneticos-obtenidos-comentando-los-distintos-clados-y-los-resultados-que-se-deducen-de-ellos">-Describir los árboles filogenéticos obtenidos comentando los distintos clados y los resultados que se deducen de ellos:</a><ul>
+<li><a class="reference internal" href="#figura-1-ssu-rrna">Figura 1: SSU rRNA</a></li>
+<li><a class="reference internal" href="#figura-2-actina">Figura 2: Actina.</a></li>
+<li><a class="reference internal" href="#figura-3-cowp">Figura 3: COWP.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.html" title="Previous Chapter: Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Alineamiento Múl...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../Conclusiones/Conclusiones.html" title="Next Chapter: Conclusiones:"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Conclusiones: &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="construccion-y-analisis-de-arboles-filogeneticos">
+<h1>Construcción y Análisis de Árboles Filogenéticos:<a class="headerlink" href="#construccion-y-analisis-de-arboles-filogeneticos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="comentar-la-seleccion-de-los-metodos-de-construccion-de-arboles-utilizados">
+<h2>-Comentar la selección de los métodos de construcción de árboles utilizados:<a class="headerlink" href="#comentar-la-seleccion-de-los-metodos-de-construccion-de-arboles-utilizados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El método escogido para la construcción de los árboles filogenéticos ha sido el de <strong>Neighbour Joining</strong>. El principio de este método, basado en distancia, es buscar pares de Unidades Taxonómicas Operacionales (OTUs, vecinos); la distancia entre todos los pares de secuencias, de forma que se disminuye la longitud total de las ramas en cada etapa de la agrupación (empezando por un árbol en forma de estrella). La longitud de los brazos, entre otros parámetros, puede ser obtenida rápidamente mediante este método.</p>
+<p>En definitiva, se puede obtener de una forma ágil y sencilla, mediante la utilización de este método, árboles filogenéticos con ramas de distinta longitud a base de añadir los taxones vecinos progresivamente.</p>
+</div>
+<div class="section" id="describir-los-arboles-filogeneticos-obtenidos-comentando-los-distintos-clados-y-los-resultados-que-se-deducen-de-ellos">
+<h2>-Describir los árboles filogenéticos obtenidos comentando los distintos clados y los resultados que se deducen de ellos:<a class="headerlink" href="#describir-los-arboles-filogeneticos-obtenidos-comentando-los-distintos-clados-y-los-resultados-que-se-deducen-de-ellos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="figura-1-ssu-rrna">
+<h3>Figura 1: SSU rRNA<a class="headerlink" href="#figura-1-ssu-rrna" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Fruto de 1000 replicaciones (bootstrap):</p>
+<a class="reference internal image-reference" href="../_images/Arbol1.png"><img alt="Filogenia" class="align-left" src="../_images/Arbol1.png" style="width: 297.5px; height: 777.75px;" /></a>
+<a class="reference internal image-reference" href="../_images/PairwisedistancesFig1.png"><img alt="Filogenia" class="align-right" src="../_images/PairwisedistancesFig1.png" style="width: 560.7px; height: 250.6px;" /></a>
+<div class="topic">
+<p class="topic-title first">&#8220;Pairwise distances&#8221;:</p>
+<p>También se lleva a cabo el cálculo de las distancias genéticas según el modelo de Kimura-2 parámetros.</p>
+</div>
+</div>
+<div class="section" id="figura-2-actina">
+<h3>Figura 2: Actina.<a class="headerlink" href="#figura-2-actina" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Fruto de 1000 replicaciones (bootstrap):</p>
+<a class="reference internal image-reference" href="../_images/Arbol2.png"><img alt="Filogenia" class="align-right" src="../_images/Arbol2.png" style="width: 298.35px; height: 331.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/PairwisedistancesFig2.PNG"><img alt="Filogenia" class="align-center" src="../_images/PairwisedistancesFig2.PNG" style="width: 311.85px; height: 152.95px;" /></a>
+<div class="topic">
+<p class="topic-title first">&#8220;Pairwise distances&#8221;:</p>
+<p>También se lleva a cabo el cálculo de las distancias genéticas según el modelo de Kimura-2 parámetros.</p>
+</div>
+</div>
+<div class="section" id="figura-3-cowp">
+<h3>Figura 3: COWP.<a class="headerlink" href="#figura-3-cowp" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Fruto de 1000 replicaciones (bootstrap):</p>
+<a class="reference internal image-reference" href="../_images/Arbol3.png"><img alt="Filogenia" class="align-right" src="../_images/Arbol3.png" style="width: 298.35px; height: 286.45px;" /></a>
+<a class="reference internal image-reference" href="../_images/PairwisedistancesFig3.PNG"><img alt="Filogenia" class="align-center" src="../_images/PairwisedistancesFig3.PNG" style="width: 306.0px; height: 152.0px;" /></a>
+<div class="topic">
+<p class="topic-title first">&#8220;Pairwise distances&#8221;:</p>
+<p>También se lleva a cabo el cálculo de las distancias genéticas según el modelo de Kimura-2 parámetros.</p>
+</div>
+<p>En general, se han comparado las secuencias de los tres genes obtenidas en el estudio con todas las secuencias de nucleótidos disponibles en GenBank para <em>C.cervine</em>, <em>C.cervid</em>, <em>W4</em> o <em>genotipo 3 genotipos</em> y otras especies <em>Cryptosporidium</em> y genotipos.</p>
+<p>En la figura 1 observamos cómo mediante el análisis filogenético de las secuencias de SSU rRNA obtenemos resultados que concuerdan con el hecho de que las secuencias obtenidas a lo largo de la experimentación, así como las asignadas a <em>C.cervine</em>, <em>C.cervid</em>, <em>W4</em> o <em>genotipo 3 genotipos</em>, forman un nuevo clado con un origen común a <em>C.suis</em> y relación filogenética con otras especies.
+De la misma forma, observamos cómo en las figuras 2 y 3 llegamos al mismo resultado, y además las secuencias son idénticas entre sí (100%). En el caso de SSU rRNA se observa una ligera variación entre los aislados en el nuevo grupo; con una distancia entre los pares de entre 0 y 0.008.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Accession Numbers de <em>C.suis</em> según secuencia: AF108861, AF382344 y AF266270 para SSU rRNA, actina y COWP respectivamente.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, José Luis Ruiz Rodríguez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

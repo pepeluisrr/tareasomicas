@@ -1,0 +1,33 @@
+############################################
+Material extra utilizado:
+############################################
+
+En el marco de la asignatura se realizó y compiló una Interfaz Gráfica de Usuario (GUI) utilizando **MatLab R2013a**, con el objetivo de facilitar el manejo de grandes cantidades de secuencias biológicas y números de accessión en diversas bases de datos.
+
+Gracias al toolbox `Bioinformatics <http://www.mathworks.es/products/bioinfo/>`_ se han conseguido generar con éxito archivos de texto en cualquier formato conteniendo secuencias de una determinada base de datos; con longitud cabecera y parámetros determinados.
+
+.. image:: MATLAB2.PNG
+   :scale: 85%
+   :alt: MATLAB
+   :align: left
+
+.. image:: MATLAB3.PNG
+   :scale: 85%
+   :alt: MATLAB
+   :align: right
+
+.. image:: MATLAB1.PNG
+   :scale: 150%
+   :alt: MATLAB
+   :align: center
+
+
+
+
+
+
+
+
+
+
+`Descargar archivo comprimido -GUI <https://wikibq.us.es/TOB2014/images/5/5d/FASTA.zip>`_

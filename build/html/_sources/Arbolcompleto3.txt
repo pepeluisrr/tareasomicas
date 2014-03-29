@@ -1,0 +1,16 @@
+
+Figura 3 - Árboles completos:
+########################################
+Tarea:
+
+.. image:: Arbol3.png
+   :scale: 125%
+   :alt: Filogenia
+   :align: left
+
+Artículo:
+
+.. image:: Articulo3.png
+   :scale: 90%
+   :alt: Filogenia
+   :align: right

@@ -1,0 +1,49 @@
+#######################################################################
+Referencias:
+#######################################################################
+
+-Enumerar artículos, manuales de las herramientas usadas y herramientas de software:
+#######################################################
+
+
+Artículos científicos:
+************************
+
+.. topic:: Artículo de referencia:
+   
+   Fayer R., Santín M., Macarisin D. Cryptosporidium ubiquitum n. sp. in animals and humans. Veterinary Parasitology 172 (2010) 23–32. `Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Fayer+R.%2C+Sant%C3%ADn+M.%2C+Macarisin+D.+Cryptosporidium+ubiquitum+n.+sp.+in+animals+and+humans>`_. `Descarga directa <https://db.tt/ixatVKF7>`_.
+
+Saitou N.,Nei M. The Neighbor-joining Method: A New Method for Reconstructing Phylogenetic Trees. Mol Biol Evol. 1987 Jul;4(4):406-25. `Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Saitou+N.%2CNei+M.+The+Neighbor-joining+Method%3A+A+New+Method+for+Reconstructing+Phylogenetic+Trees.>`_.  
+
+Sulaiman IM., Lal AA., Xiao L. Molecular phylogeny and evolutionary relationships of cryptosporidium parasites at the actin locus. J. Parasitol., 88(2), 2002, pp. 388–394. `Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Sulaiman+IM.%2C+Lal+AA.%2C+Xiao+L.+Molecular+phylogeny+and+evolutionary+relationships+of+cryptosporidium+parasites+at+the+actin+locus>`_.  
+
+Thompson JD., Higgins DG., Gibson TJ. CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice. Nucleic Acids Res. Nov 11, 1994; 22(22): 4673–4680. `Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Thompson+JD.%2C+Higgins+DG.%2C+Gibson+TJ.+CLUSTAL+W%3A+improving+the+sensitivity+of+progressive+multiple+sequence+alignment+through+sequence+weighting%2C+position-specific+gap>`_.  
+
+Xiao L., Escalante L., Yang C., Sulaiman I., Escalante AA., Montali RJ., Fayer R., Lal AA. Phylogenetic Analysis of Cryptosporidium Parasites Based on the Small-Subunit rRNA Gene Locus. Appl. Environ. Microbiol. 1999, 65(4):1578. `Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Xiao+L.%2C+Escalante+L.%2C+Yang+C.%2C+Sulaiman+I.%2C+Escalante+AA.%2C+Montali+RJ.%2C+Fayer+R.%2C+Lal+AA.+Phylogenetic+Analysis+of+Cryptosporidium+Parasites+Based+on+the+Small-Subunit+rRNA+Gene+Locus>`_.  
+
+Xiao L., Fayer R., Ryan U., Upton SJ. Cryptosporidium Taxonomy: Recent Advances and Implications for Public Health. Clin Microbiol Rev. Jan 2004; 17(1): 72–97.
+`Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/?term=Xiao+L.%2C+Fayer+R.%2C+Ryan+U.%2C+Upton+SJ.+Cryptosporidium+Taxonomy%3A+Recent+Advances+and+Implications+for+Public+Health>`_.  
+
+Bases de datos:
+********************************
+`Pubmed <http://www.ncbi.nlm.nih.gov/pubmed/>`_
+
+`Pubmed Central <https://www.ncbi.nlm.nih.gov/pmc/>`_
+
+`Biblioteca Centros de la Salud Universidad de Sevilla <http://bib.us.es>`_
+
+Software:
+********************************
+`Molecular Evolutionary Genetics Analysis (MEGA) v6 build:6140226 <http://www.megasoftware.net/>`_
+
+.. image:: Mega.PNG
+   :scale: 80%
+   :alt: MEGA
+   :align: right
+
+`Sphinx Pythin Documentation Generator <http://sphinxsearch.com/>`_
+
+Ubuntu 12.04 LTS
+
+Matlab R2013a.
+`Ver Material Extra <../Material%20extra.html>`_

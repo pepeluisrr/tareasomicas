@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución: &mdash; Tarea 1 2014</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/Captura8.ico"/>
+    <link rel="top" title="Tarea 1 2014" href="../index.html" />
+    <link rel="next" title="Construcción y Análisis de Árboles Filogenéticos:" href="../Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.html" />
+    <link rel="prev" title="Secuencias biológicas usadas:" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+  
+  <a href="https://www.cs.us.es/~fran/teaching/tob2014/tob2014.html"
+     class="visible-desktop hidden-xs"><img
+    id="banner"
+    style="position: absolute; top: 50px; right: 0; border: 0"
+    src="https://dl.dropboxusercontent.com/u/72256221/Omicas2.PNG"
+    alt="Técnicas Ómicas y Bioinformática"></a>
+    
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/Captura10.PNG">
+          Filogenia 2014</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="../Material extra.html">Material Extra</a></li>
+                <li><a href="http://www.ncbi.nlm.nih.gov/nuccore">Base datos NCBI</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Sitio <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduccion/Introduccion.html">Introducción:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduccion/Introduccion.html#antecedentes">-Antecedentes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduccion/Introduccion.html#objetivo-del-estudio">-Objetivo del estudio:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html">Secuencias biológicas usadas:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#argumentar-la-adecuacion-de-las-secuencias-seleccionadas">-Argumentar la adecuación de las secuencias seleccionadas:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#descripcion-de-las-secuencias-utilizadas-junto-con-sus-numeros-de-accesion">-Descripción de las secuencias utilizadas junto con sus números de accesión:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html#enlace-al-archivo-de-las-secuencias">-Enlace al archivo de las secuencias:</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#algoritmo-de-alineamiento-multiple-seleccionado">-Algoritmo de alineamiento múltiple seleccionado:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comentar-alineamiento-multiple-obtenido-comentando-la-existencia-o-no-de-regiones-conservadas-y-su-relevancia">-Comentar alineamiento múltiple obtenido comentando la existencia o no de regiones conservadas y su relevancia:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comentar-alineamiento-multiple-obtenido-comentando-las-sustituciones-o-mutaciones-relevantes-entre-las-secuencias">-Comentar alineamiento múltiple obtenido comentando las sustituciones o mutaciones relevantes entre las secuencias:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mostrar-la-clasificacion-de-modelos-de-sustitucion-y-elegir-el-mejor-modelo-de-sustitucion-posible-para-la-construccion-de-arboles-filogeneticos">-Mostrar la clasificación de modelos de sustitución y elegir el mejor modelo de sustitución posible para la construcción de árboles filogenéticos:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#describir-y-comentar-el-modelo-de-sustitucion-seleccionado">-Describir y comentar el modelo de sustitución seleccionado:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.html">Construcción y Análisis de Árboles Filogenéticos:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.html#comentar-la-seleccion-de-los-metodos-de-construccion-de-arboles-utilizados">-Comentar la selección de los métodos de construcción de árboles utilizados:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.html#describir-los-arboles-filogeneticos-obtenidos-comentando-los-distintos-clados-y-los-resultados-que-se-deducen-de-ellos">-Describir los árboles filogenéticos obtenidos comentando los distintos clados y los resultados que se deducen de ellos:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Conclusiones/Conclusiones.html">Conclusiones:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Conclusiones/Conclusiones.html#relacionar-todos-los-resultados-anteriores-para-formular-conclusiones-del-analisis-realizado">-Relacionar todos los resultados anteriores para formular conclusiones del análisis realizado:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Conclusiones/Conclusiones.html#relacionar-los-resultados-obtenidos-con-los-descritos-en-el-articulo-seleccionado">-Relacionar los resultados obtenidos con los descritos en el artículo seleccionado:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Conclusiones/Conclusiones.html#comparacion-arboles-completos">-Comparación árboles completos:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Referencias/Referencias.html">Referencias:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Referencias/Referencias.html#enumerar-articulos-manuales-de-las-herramientas-usadas-y-herramientas-de-software">-Enumerar artículos, manuales de las herramientas usadas y herramientas de software:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:</a><ul>
+<li><a class="reference internal" href="#algoritmo-de-alineamiento-multiple-seleccionado">-Algoritmo de alineamiento múltiple seleccionado:</a></li>
+<li><a class="reference internal" href="#comentar-alineamiento-multiple-obtenido-comentando-la-existencia-o-no-de-regiones-conservadas-y-su-relevancia">-Comentar alineamiento múltiple obtenido comentando la existencia o no de regiones conservadas y su relevancia:</a><ul>
+<li><a class="reference internal" href="#ssu-rrna">SSU rRNA:</a></li>
+<li><a class="reference internal" href="#actina">Actina:</a></li>
+<li><a class="reference internal" href="#cowp">COWP:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comentar-alineamiento-multiple-obtenido-comentando-las-sustituciones-o-mutaciones-relevantes-entre-las-secuencias">-Comentar alineamiento múltiple obtenido comentando las sustituciones o mutaciones relevantes entre las secuencias:</a></li>
+<li><a class="reference internal" href="#mostrar-la-clasificacion-de-modelos-de-sustitucion-y-elegir-el-mejor-modelo-de-sustitucion-posible-para-la-construccion-de-arboles-filogeneticos">-Mostrar la clasificación de modelos de sustitución y elegir el mejor modelo de sustitución posible para la construcción de árboles filogenéticos:</a><ul>
+<li><a class="reference internal" href="#id1">SSU rRNA:</a></li>
+<li><a class="reference internal" href="#id2">Actina:</a></li>
+<li><a class="reference internal" href="#id3">COWP:</a></li>
+<li><a class="reference internal" href="#mejor-modelo">Mejor modelo:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#describir-y-comentar-el-modelo-de-sustitucion-seleccionado">-Describir y comentar el modelo de sustitución seleccionado:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../Secuencias biologicas usadas/Secuencias biologicas usadas.html" title="Previous Chapter: Secuencias biológicas usadas:"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Secuencias bioló...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos.html" title="Next Chapter: Construcción y Análisis de Árboles Filogenéticos:"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Construcción y A... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="alineamiento-multiple-y-seleccion-del-mejor-modelo-de-sustitucion">
+<h1>Alineamiento Múltiple y Selección del Mejor Modelo de Sustitución:<a class="headerlink" href="#alineamiento-multiple-y-seleccion-del-mejor-modelo-de-sustitucion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="algoritmo-de-alineamiento-multiple-seleccionado">
+<h2>-Algoritmo de alineamiento múltiple seleccionado:<a class="headerlink" href="#algoritmo-de-alineamiento-multiple-seleccionado" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El algoritmo escogido en este caso es <strong>ClustalW</strong>, el más común para alineamiento de nucleótidos.</p>
+<p>En concreto, ClustalW en primer lugar asigna pesos individuales a cada secuencia en un alineamiento parcial, para restar peso a las secuencias que duplican cerca y sumarlo a las más divergentes. Después, se elige la matriz matriz de sustitución de aminoácidos, que varían en las distintas etapas según el grado de divergencia. En tercer lugar, se abren espacios a modo de penalización en los residuos y se reducen los espacioes localmente. Por último,las posiciones de los primeros alineamientos donde se abrieron espacios reciben localmente penalización reducida para favorecer la apertura de nuevos espacios en estas posiciones.</p>
+</div>
+<div class="section" id="comentar-alineamiento-multiple-obtenido-comentando-la-existencia-o-no-de-regiones-conservadas-y-su-relevancia">
+<h2>-Comentar alineamiento múltiple obtenido comentando la existencia o no de regiones conservadas y su relevancia:<a class="headerlink" href="#comentar-alineamiento-multiple-obtenido-comentando-la-existencia-o-no-de-regiones-conservadas-y-su-relevancia" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="ssu-rrna">
+<h3>SSU rRNA:<a class="headerlink" href="#ssu-rrna" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><a class="reference download internal" href="../_downloads/alineamientofigura1.mas"><tt class="xref download docutils literal"><span class="pre">Descargar</span> <span class="pre">la</span> <span class="pre">sesión</span> <span class="pre">de</span> <span class="pre">alineamiento</span> <span class="pre">realizada</span> <span class="pre">con</span> <span class="pre">el</span> <span class="pre">software</span> <span class="pre">Mega6</span></tt></a></p>
+<a class="reference internal image-reference" href="../_images/AlineamientoSSUrRNA.png"><img alt="SSU rRNA Fig 1" class="align-center" src="../_images/AlineamientoSSUrRNA.png" style="width: 1260.0px; height: 787.5px;" /></a>
+<div class="topic">
+<p class="topic-title first">Gen de la SSU rRNA:</p>
+<p>Es un gen con regiones polimórficas intercaladas entre regiones conservadas. Por tanto tenemos que al avanzar en el alineamiento se llega tanto a regiones conservadas (columnas con * intercaladas en sitio 289-963 como vemos en imágenes siguientes), ya que es un gen sometido a poca presión evolutiva, como a regiones polimórficas.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/AlineamientoSSUrRNA2.png"><img alt="SSU rRNA Fig 1" class="align-left" src="../_images/AlineamientoSSUrRNA2.png" style="width: 252.0px; height: 157.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/AlineamientoSSUrRNA3.png"><img alt="SSU rRNA Fig 1" class="align-right" src="../_images/AlineamientoSSUrRNA3.png" style="width: 252.0px; height: 157.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/AlineamientoSSUrRNA4.png"><img alt="SSU rRNA Fig 1" class="align-center" src="../_images/AlineamientoSSUrRNA4.png" style="width: 504.0px; height: 315.0px;" /></a>
+<div class="topic">
+<p class="topic-title first">Nueva región polimórfica:</p>
+<p>Vemos cómo las regiones conservadas dan paso a polimorfismos de nuevo.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/AlineamientoSSUrRNA5.png"><img alt="SSU rRNA Fig 1" class="align-center" src="../_images/AlineamientoSSUrRNA5.png" style="width: 168.0px; height: 105.0px;" /></a>
+</div>
+<div class="section" id="actina">
+<h3>Actina:<a class="headerlink" href="#actina" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><a class="reference download internal" href="../_downloads/alineamientofigura2.mas"><tt class="xref download docutils literal"><span class="pre">Descargar</span> <span class="pre">la</span> <span class="pre">sesión</span> <span class="pre">de</span> <span class="pre">alineamiento</span> <span class="pre">realizada</span> <span class="pre">con</span> <span class="pre">el</span> <span class="pre">software</span> <span class="pre">Mega6</span></tt></a></p>
+<a class="reference internal image-reference" href="../_images/Alineamientoactina.png"><img alt="Actina Fig 2" class="align-center" src="../_images/Alineamientoactina.png" style="width: 1260.0px; height: 382.5px;" /></a>
+<div class="topic">
+<p class="topic-title first">Gen de la actina:</p>
+<p>Es un gen muy polimófico, sin apenas regiones conservadas.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/Alineamientoactina2.png"><img alt="Actina Fig 2" class="align-left" src="../_images/Alineamientoactina2.png" style="width: 251.7px; height: 76.35px;" /></a>
+<a class="reference internal image-reference" href="../_images/Alineamientoactina3.png"><img alt="Actina Fig 2" class="align-right" src="../_images/Alineamientoactina3.png" style="width: 252.0px; height: 76.05px;" /></a>
+<div class="topic">
+<p class="topic-title first">Regiones muy polimórficas:</p>
+<p>Vemos algunas regiones conservadas centrales (columnas con * intercaladas entre los sitios 235-719) pero al avanzar en el alinemiento se llega a secuencias muy polimórficas.</p>
+<p>Cabe destacar que hay secuencias concretas que introducen una gran cantidad de espacios.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/Alineamientoactina4.png"><img alt="SSU rRNA Fig 3" class="align-center" src="../_images/Alineamientoactina4.png" style="width: 168.0px; height: 50.4px;" /></a>
+</div>
+<div class="section" id="cowp">
+<h3>COWP:<a class="headerlink" href="#cowp" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><a class="reference download internal" href="../_downloads/alineamientofigura3.mas"><tt class="xref download docutils literal"><span class="pre">Descargar</span> <span class="pre">la</span> <span class="pre">sesión</span> <span class="pre">de</span> <span class="pre">alineamiento</span> <span class="pre">realizada</span> <span class="pre">con</span> <span class="pre">el</span> <span class="pre">software</span> <span class="pre">Mega6</span></tt></a></p>
+<a class="reference internal image-reference" href="../_images/Alineamientocowp.png"><img alt="COWP Fig 3" class="align-center" src="../_images/Alineamientocowp.png" style="width: 1260.0px; height: 345.0px;" /></a>
+<div class="topic">
+<p class="topic-title first">Gen de la COWP:</p>
+<p>Es un gen con mucha variabilidad; cabe destacar que hay secuencias concretas que introducen una gran cantidad de espacios. Vemos algunas regiones conservadas entre los sitios 415 y 851.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/Alineamientocowp2.png"><img alt="COWP Fig 3" class="align-left" src="../_images/Alineamientocowp2.png" style="width: 420.0px; height: 113.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/Alineamientocowp3.png"><img alt="COWP Fig 3" class="align-center" src="../_images/Alineamientocowp3.png" style="width: 420.0px; height: 112.0px;" /></a>
+</div>
+</div>
+<div class="section" id="comentar-alineamiento-multiple-obtenido-comentando-las-sustituciones-o-mutaciones-relevantes-entre-las-secuencias">
+<h2>-Comentar alineamiento múltiple obtenido comentando las sustituciones o mutaciones relevantes entre las secuencias:<a class="headerlink" href="#comentar-alineamiento-multiple-obtenido-comentando-las-sustituciones-o-mutaciones-relevantes-entre-las-secuencias" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En todas las secuencias encontramos <strong>sustituciones</strong> (lo más frecuente) aunque también ocurren inserciones y deleciones (<strong>indels</strong>, menos frecuentes). Cabe destacar que con el algoritmo utilizado determinadas secuencias introducen espacios artificiales que los autores eliminan manualmente al final del estudio.</p>
+<p>El gen <strong>SSU rRNA</strong>, del RNA de la Subunidad Ribosomal Pequeña (18S), evoluciona lentamente en esta especie, razón por la cual encontramos amplias zonas conservadas intercaladas. La longitud varía entre las especies y las variaciones se encuentran sobre todo en la primera mitad de las secuencias.
+En el caso del gen de la <strong>actina</strong> encontramos gran cantidad de mutaciones, lo que se corresponde con un gen muy polimórfico. Hay mínimas variaciones intergenotipo, que pueden sugerir una adaptación a los distintos anfitriones, y claras variaciones interespecies en el género.
+Asímismo, se ha demostrado que genes como <strong>COWP</strong> cambian de forma muy pronunciada en algunos aislamientos (lo que dificulta el diseño de primers) y puede que representen adaptación adaptación del parásito a anfitriones específicos.</p>
+</div>
+<div class="section" id="mostrar-la-clasificacion-de-modelos-de-sustitucion-y-elegir-el-mejor-modelo-de-sustitucion-posible-para-la-construccion-de-arboles-filogeneticos">
+<h2>-Mostrar la clasificación de modelos de sustitución y elegir el mejor modelo de sustitución posible para la construcción de árboles filogenéticos:<a class="headerlink" href="#mostrar-la-clasificacion-de-modelos-de-sustitucion-y-elegir-el-mejor-modelo-de-sustitucion-posible-para-la-construccion-de-arboles-filogeneticos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="id1">
+<h3>SSU rRNA:<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/modelofig1.PNG"><img alt="Jerarquía modelos" class="align-center" src="../_images/modelofig1.PNG" style="width: 826.5px; height: 492.5px;" /></a>
+</div>
+<div class="section" id="id2">
+<h3>Actina:<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/modelofig2.PNG"><img alt="Jerarquía modelos" class="align-center" src="../_images/modelofig2.PNG" style="width: 827.5px; height: 491.0px;" /></a>
+</div>
+<div class="section" id="id3">
+<h3>COWP:<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/modelofig3.PNG"><img alt="Jerarquía modelos" class="align-center" src="../_images/modelofig3.PNG" style="width: 825.5px; height: 490.5px;" /></a>
+</div>
+<div class="section" id="mejor-modelo">
+<h3>Mejor modelo:<a class="headerlink" href="#mejor-modelo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El mejor modelo para la inferencia filogenética según el orden jerárquico proporcionado y los datos disponibles resulta ser en los tres casos el de <strong>Kimura-2 parámetros</strong>.</p>
+</div>
+</div>
+<div class="section" id="describir-y-comentar-el-modelo-de-sustitucion-seleccionado">
+<h2>-Describir y comentar el modelo de sustitución seleccionado:<a class="headerlink" href="#describir-y-comentar-el-modelo-de-sustitucion-seleccionado" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El modelo de sustitución o modelo estadístico de evolución molecular escogido en los tres casos ha sido el de Kimura-2 parámetros; y permitirá construir la matriz de distancias en las que se basará la construcción del árbol filogenético.</p>
+<a class="reference internal image-reference" href="../_images/Kimura.png"><img alt="Kimura" class="align-left" src="../_images/Kimura.png" style="width: 179.2px; height: 179.2px;" /></a>
+<p>La <strong>distancia genética</strong> entre dos secuencias es el número de sustituciones reales que ocurren para llegar de una secuencia a otra. El modelo de Kimura-2 parámetros asume 2 parámetros, de manera que avanza respecto a modelos anteriores al tratar la probabilidad de que ocurran transversiones (parámetro “b”, probabilidad de cambios entre purinas o pirimidinas por otras de la misma clase) y transiciones (parámetro “a”, probabilidad de cambios de pirimidinas por purinas o viceversa); no contempla tan solo probabilidad de “sustituciones” como el modelo de Jukes-Cantor.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, José Luis Ruiz Rodríguez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
