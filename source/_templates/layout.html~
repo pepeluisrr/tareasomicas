@@ -1,0 +1,24 @@
+{% extends "!layout.html" %}
+
+{# Custom CSS overrides #}
+{# set bootswatch_css_custom = ['_static/my-styles.css'] #}
+
+{# Add banner (). #}
+{% block header %}
+  {{ super() }}
+  <a href="https://www.cs.us.es/~fran/teaching/tob2014/tob2014.html"
+     class="visible-desktop hidden-xs"><img
+    id="banner"
+    style="position: absolute; top: 50px; right: 0; border: 0"
+    src="https://dl.dropboxusercontent.com/u/72256221/Omicas.PNG"
+    alt="Técnicas Ómicas y Bioinformática"></a>
+    
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+{% endblock %}
+

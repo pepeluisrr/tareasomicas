@@ -1,0 +1,15 @@
+#######################################################################
+Introducción:
+#######################################################################
+
+-Antecedentes:
+###############################
+La criptosporidiosis, también conocida como "cripto", es una enfermedad infecciosa producida por los organismos del género **Cryptosporidium** en humanos y animales. Estos microorganismos parásitos infectan la pared interna del intestino delgado para causar diarrea acuosa, como síntoma principal, además de malabsorción, deshidratación, fiebre, dolores abdominales...
+
+La mayoría de infecciones humanas están provocadas por *C.hominis* y *C.parvum*.
+
+-Objetivo del estudio:
+###############################
+En los últimos años las nuevas técnicas de **Biología Molecular** han revolucionado el estudio y compresión de este género y su diversidad, así como la organización interna de sus especies. Se postula que mediante la secuenciación de productos purificados de PCR relativos a diferentes genes, carentes de recombinación, y el análisis filogenético se podrían identificar nuevas especies diferenciándolas de las ya reconocidas.
+
+El estudio se llevó a cabo para añadir a la información molecular ya existente datos morfométricos y biológicos, dada la confusión existente en las publicaciones de GenBank en algunos genotipos; por ejemplo el *C.cervine*, a cuyos genotipos se les han asignado diversas denominaciones (*C.cervine*, *C.cervid*, *W4* o *genotipo 3 genotipos*).

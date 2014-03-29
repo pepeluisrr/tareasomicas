@@ -1,0 +1,24 @@
+.. Criptofilogenia documentation master file, created by
+   sphinx-quickstart on Tue Mar 18 15:48:25 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Filogenia Cryptosporidium:
+===========================================
+Contents:
+
+.. toctree::
+   :maxdepth: 9
+
+   
+   Introduccion/Introduccion
+   Secuencias biologicas usadas/Secuencias biologicas usadas
+   Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion/Alineamiento Multiple y Seleccion del Mejor Modelo de Sustitucion
+   Construccion y Analisis de Arboles Filogeneticos/Construccion y Analisis de Arboles Filogeneticos
+   Conclusiones/Conclusiones
+   Referencias/Referencias
+   
+Búsqueda
+==================
+* * :ref:`search`
+

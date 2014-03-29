@@ -1,0 +1,44 @@
+###############################
+Secuencias biológicas usadas:
+###############################
+
+-Argumentar la adecuación de las secuencias seleccionadas:
+###############################
+Para mejorar la compresión y el estudio de la epidemiología del genotipo C.cervine se recurrió a 3 locis no relacionados como son **SSU rRNA** (Small SubUnit ribosomal RNA), **actina** y **COWP** (Cryptosporidium Oocyst Wall Protein); ya que en el diseño experimental de las infecciones se usaron oocistos y estos genes han sido descritos en estudios anteriores como parámetros adecuados para la observación de diferencias génicas y genotipado y elaboración de los estudios filogenéticos.
+
+En concreto, SSU rRNA es un gen que evoluciona lentamente, con variaciones de secuencia limitadas a regiones concretas, y el gen de la actina es muy polimórfico; con lo que SSU rRNA es útil para establecer relaciones distantes y actina es un gen que resulta de utilidad para inferir la relación entre especies parecidas. SSU rRNa y actina, por tener distribución universal, son genes que permiten el uso de primers genéricos mientras que la secuencia del gen COWP se utiliza junto a otras (tubulina, TRAP, microsatélites…) en diferenciar especies concretas; pese al complicado diseño de los primers.
+
+-Descripción de las secuencias utilizadas junto con sus números de accesión:
+##################################################
+
+La base de datos de secuencias elegida en este caso fue **GenBank**; donde se pueden encontrar 131 secuencias disponibles correspondientes a 7 genes.
+En esta ocasión, para caracterizar el genotipo utilizamos en cada caso secuencias de una serie de especies ya reconocidas y distintas secuencias de lo que se piensa puede ser una nueva especie iguales al 100%.
+
+       		                         Tablas de Accession Numbers
+
+                                               `Figura 1 <file:///home/pepe/Escritorio/TecnicasOmicas/Tareahtml/demo/build/html/Figura%201.html>`_                   
+
+                                               `Figura 2 <file:///home/pepe/Escritorio/TecnicasOmicas/Tareahtml/demo/build/html/Figura%202.html>`_                  
+
+                                               `Figura 3 <file:///home/pepe/Escritorio/TecnicasOmicas/Tareahtml/demo/build/html/Figura%203.html>`_         
+
+
+-Enlace al archivo de las secuencias:
+########################################
+Se incluyen en este punto enlaces a los archivos multifasta que contienen las secuencias para cada uno de los genes indicados en la sección anterior.
+
+:download:`Fig1 <../FIG 1.fasta>`
+
+`Descarga directa <https://dl.dropboxusercontent.com/u/72256221/FIG%201.fasta?dl=1>`_
+
+:download:`Fig2 <../FIG 2.fasta>`
+
+`Descarga directa <https://dl.dropboxusercontent.com/u/72256221/FIG%202.fasta?dl=1>`_
+
+:download:`Fig3 <../FIG 3.fasta>`
+
+`Descarga directa <https://dl.dropboxusercontent.com/u/72256221/FIG%203.fasta?dl=1>`_
+
+.. note::
+   No se ha trabajado con algunas secuencias por los motivos indicados en el apartado anterior, por lo tanto no se incluyen en estos archivos multifasta.
+
